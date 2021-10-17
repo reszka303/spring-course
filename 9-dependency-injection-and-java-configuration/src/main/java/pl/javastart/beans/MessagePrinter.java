@@ -1,9 +1,10 @@
 package pl.javastart.beans;
 
 public class MessagePrinter {
+
     private MessageProducer producer;
 
-    public MessagePrinter() {}
+    MessagePrinter() {}
 
     public MessagePrinter(MessageProducer producer) {
         this.producer = producer;
@@ -12,7 +13,6 @@ public class MessagePrinter {
     public MessageProducer getProducer() {
         return producer;
     }
-
     public void setProducer(MessageProducer producer) {
         this.producer = producer;
     }

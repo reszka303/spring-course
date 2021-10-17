@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>10-components-and-automatic-bindings</artifactId>
+    <artifactId>11-injection-by-field-setter-and-constructor</artifactId>
 
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
@@ -18,22 +18,11 @@
     </properties>
 
     <dependencies>
-
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring-framework.version}</version>
         </dependency>
-
-        <dependency>
-<!--        Można alternatywnie stosować przy wiązaniu adnotację @Inject, -->
-<!--        korzystając z CDI, ale w praktyce się tego nie robi-->
-            <groupId>javax.enterprise</groupId>
-            <artifactId>cdi-api</artifactId>
-            <version>2.0.SP1</version>
-        </dependency>
-
-
     </dependencies>
 
 </project>

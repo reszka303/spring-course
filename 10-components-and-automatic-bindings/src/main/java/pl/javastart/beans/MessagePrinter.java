@@ -6,10 +6,13 @@ import javax.inject.Inject;
 
 @Component
 public class MessagePrinter {
-//    @Inject można alternatywnie stosować przy wiązaniu adnotację @Inject,
-//    korzystając z CDI, ale w praktyce się tego nie robi
+//    @Inject
+/*
+w miejscach gdzie stosowaliśmy adnotację @Autowired możemy wykorzystać alternatywnie adnotację @Inject.
+Na co dzień nie spotkasz się z tym podejściem zbyt często,
+jednak warto wiedzieć, że taka możliwość istnieje.
+ */
     @Autowired
-
     private MessageProducer producer;
 
     MessagePrinter() {}
