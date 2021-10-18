@@ -5,7 +5,7 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="messageProducer" class="pl.javastart.beans.SimpleMessageProducer"/>
-    <bean id="messagePrinter" class="pl.javastart.beans.MessagePrinter">
+    <bean id="messagePrinter" class="pl.javastart.beans.printers.MessagePrinter">
         <property name="producer" ref="messageProducer"/>
     </bean>
 
