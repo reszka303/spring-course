@@ -1,0 +1,6 @@
+
+mvn clean compile exec:java
+mvn clean compile exec:java -Dspring.profiles.default=dev
+mvn clean compile exec:java -Dspring.profiles.default=dev -Dspring.profiles.active=prod
+mvn clean compile exec:java -Dspring.profiles.active=prod
+
