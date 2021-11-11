@@ -62,4 +62,14 @@ public class Book implements Serializable {
         return "Book [id=" + id + ", isbn="
                 + isbn + ", title=" + title + ", author=" + author + "]";
     }
+
+    @PrePersist
+    public void prePersist() {
+        System.out.println("Zapis obiektu " + this);
+    }
+
+    @PostPersist
+    public void postPersist() {
+        System.out.println("Zapisano obiekt " + this);
+    }
 }
