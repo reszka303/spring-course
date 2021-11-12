@@ -2,17 +2,11 @@ package pl.javastart.model;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "user_details")
 public class UserDetails implements Serializable {
-    private static final long serialVersionUID = 7021150458271420830L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +17,8 @@ public class UserDetails implements Serializable {
     @Column(name = "lastname")
     private String lastName;
     private String address;
+    @OneToOne(mappedBy = "details")
+    private User user;
 
     UserDetails() {}
     public UserDetails(String firstName, String lastName, String address) {
@@ -38,6 +34,7 @@ public class UserDetails implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getFirstName() {
         return firstName;
     }
@@ -56,6 +53,15 @@ public class UserDetails implements Serializable {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     @Override
     public String toString() {
         return "UserDetails [id=" + id + ", firstName=" + firstName + ", "
