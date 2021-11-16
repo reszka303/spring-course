@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>_35-dynamic-queries</artifactId>
+    <artifactId>_36-static-queries</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>_35-dynamic-queries</name>
-    <description>_35-dynamic-queries</description>
+    <name>_36-static-queries</name>
+    <description>_36-static-queries</description>
     <properties>
         <java.version>17</java.version>
     </properties>
