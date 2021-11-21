@@ -2,11 +2,11 @@ package pl.javastart;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
-public class SpringMvcCalcApplication {
+public class SpringMvcScopeRequestApplication {
+
     public static void main(String[] args) {
-        SpringApplication.run(SpringMvcCalcApplication.class, args);
+        SpringApplication.run(SpringMvcScopeRequestApplication.class, args);
     }
 }
