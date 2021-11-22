@@ -7,28 +7,34 @@ import org.springframework.web.context.WebApplicationContext;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import java.util.LinkedList;
+import java.util.List;
 
 @Component
-@Scope(scopeName = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class TimeComponent {
+@Scope(scopeName = WebApplicationContext.SCOPE_SESSION, proxyMode = ScopedProxyMode.TARGET_CLASS)
+public class ShoppingCart {
 
-    private long time;
+    private List<String> products;
 
-    public TimeComponent() {
-        time = System.currentTimeMillis();
+    public ShoppingCart() {
+        products = new LinkedList<>();
     }
 
-    public long getTime() {
-        return time;
+    public List<String> getProducts() {
+        return products;
+    }
+
+    public void addProduct(String product) {
+        this.products.add(product);
     }
 
     @PostConstruct
-    public void afterCreated() {
+    public void create() {
         System.out.println(this + " created");
     }
 
     @PreDestroy
-    public void beforeDestroy() {
+    public void destroy() {
         System.out.println(this + " destroyed");
     }
 }
