@@ -1,0 +1,10 @@
+with preset Content-Type 'null
+
+https://stackoverflow.com/questions/63832966/httpmessagenotwritableexception-no-converter-for-with-preset-content-type
+
+You need to add support for xml format using the below dependency in your pom file:
+<dependency>
+    <groupId>com.fasterxml.jackson.dataformat</groupId>
+    <artifactId>jackson-dataformat-xml</artifactId>
+    <version>2.1.1</version>
+</dependency>
